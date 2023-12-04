@@ -22,8 +22,8 @@ if ($qtd > 0) {
         echo "<td>" . $row->email . "</td>";
         echo "<td>" . $row->data_nasc . "</td>";
         echo "<td>
-                <button onClick=\"location.href=?page=editar&id=".$row->id;"\"  class='btn btn-success'>Editar</button>
-                <button class='btn btn-danger'>Excluir</button>
+        <button onClick=\"location.href='?page=editar&id=" . $row->id . "'\"  class='btn btn-success'>Editar</button>
+        <button onClick=\"location.href='?page=excluir&id=" . $row->id . "'\"  class='btn btn-danger'>Excluir</button>
         </td>";
         echo "</tr>";
     }

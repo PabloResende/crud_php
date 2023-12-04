@@ -1,9 +1,17 @@
 <h1>Editar Usuário</h1>
+
+<?php
+$sql = "SELECT * FROM cadastro WHERE id=" . $_REQUEST["id"];
+
+$res = $conn->query($sql);
+$row = $res->fetch_object();
+?>
+
 <form action="?page=salvar" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
         <label>Nome</label>
-        <input type="text" name="nome" class="form-control">
+        <input type="text" name="nome" class="form-control" value="<?php echo $row->nome; ?>">
     </div>
     <div class="mb-3">
         <label>Email</label>
