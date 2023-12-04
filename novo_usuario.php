@@ -7,15 +7,15 @@
     </div>
     <div class="mb-3">
         <label>Email</label>
-        <input type="email" name="email" class="form-control">
+        <input type="email" name="email" class="form-control" id="nome">
     </div>
     <div class="mb-3">
         <label>Senha</label>
-        <input type="password" name="senha" class="form-control">
+        <input type="password" name="senha" class="form-control" id="senha">
     </div>
     <div class="mb-3">
         <label>Data de Nascimento</label>
-        <input type="text" name="data_nasc" class="form-control">
+        <input type="text" name="data_nasc" class="form-control" id="data_nasc">
     </div>
     <div class="mb-3">
         <button type="submit" class="btn btn-primary">Enviar</button>
