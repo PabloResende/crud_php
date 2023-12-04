@@ -1,7 +1,4 @@
 <?php
-if (isset($_REQUEST["acao"])) {
-    $acao = $_REQUEST["acao"];
-
     switch ($acao) {
         case 'cadastrar':
             $nome = $_POST["nome"];
@@ -62,20 +59,13 @@ if (isset($_REQUEST["acao"])) {
 
                 $res = $conn->query($sql);
 
-                if ($res) {
+                if ($res==true) {
                     echo "<script>alert('Excluído com sucesso');</script>";
+                    echo "<script>location.href='?page=listar';</script>";
                 } else {
                     echo "<script>alert('Não foi possível completar a operação');</script>";
+                    echo "<script>location.href='?page=listar';</script>";
                 }
-            } else {
-                echo "<script>alert('ID não fornecido na requisição');</script>";
-            }
-            break;
-            default:
-            echo "<script>alert('Ação desconhecida: $acao');</script>";
-            break;
+            break;;
     }
-} else {
-    echo "<script>alert('Ação não fornecida na requisição');</script>";
-}
 ?>
